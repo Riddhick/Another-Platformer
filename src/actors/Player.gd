@@ -1,5 +1,9 @@
 extends Actor
 
+func _on_Area2D_body_entered(body: Node) -> void:
+	print("Player Deleted")
+		#queue_free()
+
 func _physics_process(delta: float) -> void:
 	var direction:=get_direction()
 	velocity=calculate_move_velocity(velocity,direction,speed)
@@ -23,3 +27,6 @@ func calculate_move_velocity(linear_velocity:Vector2,direction: Vector2,speed: V
 	if direction.y==-1.0:
 		new_velocity.y=speed.y *direction.y
 	return new_velocity
+
+
+
