@@ -2,7 +2,7 @@ extends Actor
 
 func _ready() -> void:
 	set_physics_process(false)
-	velocity.x=-speed.x
+	velocity.x=-enemy_speed[0]
 	
 
 func _on_StompDetector_body_entered(body: Node) -> void:
